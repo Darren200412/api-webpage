@@ -7,8 +7,11 @@ const alternateWeatherApiUrl = (lat, lon) => `https://api.openweathermap.org/dat
 // Function to perform all API calls in sequence
 async function fetchAllData() {
     const apiResults = document.getElementById('apiResults');
-    apiResults.innerHTML = "<p>Loading...</p>";
+    const userName = document.getElementById('userName').value; // Get the entered name
 
+    // Show loading message while fetching data
+    apiResults.innerHTML = `<p>Hello, ${userName}! Loading data...</p>`;
+    
     try {
         // First API Call: Get public IP
         const ipResponse = await fetch(ipApiUrl);
@@ -43,5 +46,4 @@ async function fetchAllData() {
     }
 }
 
-// Call the function on page load
-window.onload = fetchAllData;
+// Call the function on button click (instead of on page load)
