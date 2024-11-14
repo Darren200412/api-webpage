@@ -9,6 +9,11 @@ async function fetchAllData() {
     const apiResults = document.getElementById('apiResults');
     const userName = document.getElementById('userName').value; // Get the entered name
 
+    if (!userName) {
+        apiResults.innerHTML = "<p>Please enter your name.</p>";
+        return;
+    }
+
     // Show loading message while fetching data
     apiResults.innerHTML = `<p>Hello, ${userName}! Loading data...</p>`;
     
