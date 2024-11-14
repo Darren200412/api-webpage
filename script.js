@@ -53,4 +53,3 @@ async function fetchAllData() {
 
 // Ensure no function call on page load
 // Remove the window.onload = fetchAllData; line from your script
-
