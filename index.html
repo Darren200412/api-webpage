@@ -3,11 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Calls Page</title>
-    <script defer src="script.js"></script>
+    <title>Location and Weather Info</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #apiResults {
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
-    <h1>API Data</h1>
-    <div id="apiResults"></div>
+
+    <div class="container">
+        <h1>Weather and Location Finder</h1>
+        <p>Enter your name to get personalized location and weather data!</p>
+        
+        <!-- Input field for the name -->
+        <input type="text" id="userName" placeholder="Enter your name here">
+        
+        <!-- Button to trigger the API call -->
+        <button onclick="fetchAllData()">Get Location & Weather Info</button>
+        
+        <!-- Placeholder for the API results -->
+        <div id="apiResults"></div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
 </body>
 </html>
