@@ -51,4 +51,6 @@ async function fetchAllData() {
     }
 }
 
-// Call the function on button click (instead of on page load)
+// Ensure no function call on page load
+// Remove the window.onload = fetchAllData; line from your script
+
